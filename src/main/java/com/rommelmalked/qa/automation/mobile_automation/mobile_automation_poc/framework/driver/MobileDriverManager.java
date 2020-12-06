@@ -1,6 +1,7 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.driver;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import lombok.Getter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -21,6 +22,11 @@ public class MobileDriverManager {
             e.printStackTrace();
         }
 
+        this.driverType = driverType;
+    }
+
+    public MobileDriverManager(DriverType driverType, HashMap<String,Object> caps, AppiumDriverLocalService server){
+            driver = new AppiumDriver(server,setCapsFromHashMap(caps));
         this.driverType = driverType;
     }
 

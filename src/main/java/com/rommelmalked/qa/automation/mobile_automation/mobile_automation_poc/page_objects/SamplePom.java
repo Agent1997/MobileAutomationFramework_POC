@@ -1,4 +1,4 @@
-package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.aut.page_objects;
+package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.page_objects;
 
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.activities.Actions;
 import io.appium.java_client.AppiumDriver;
