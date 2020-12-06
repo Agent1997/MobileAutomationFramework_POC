@@ -3,11 +3,13 @@ package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.a
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
+import lombok.Getter;
 
-public class sample {
+@Getter
+public class Sample {
     //This is for demo only
 
-    @iOSXCUITFindBy(accessibility = "Okay / Cancel")
-    @AndroidFindBy(accessibility = "Navigate up")
-    private MobileElement backBtn;
+    @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@label='Alert Views'")
+    @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='Media']")
+    private MobileElement sampleBtn;
 }

@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "SampleTest">
+    <test name = "Sample parallel run">
+        <packages>
+            <package name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc"/>
+        </packages>
+    </test>
+</suite>
