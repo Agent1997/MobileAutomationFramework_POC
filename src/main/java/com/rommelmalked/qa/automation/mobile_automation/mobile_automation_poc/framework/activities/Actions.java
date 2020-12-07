@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
+/**
+ *For demo only
+ */
 public class Actions<T> {
     private AppiumDriver driver;
     private T locators;

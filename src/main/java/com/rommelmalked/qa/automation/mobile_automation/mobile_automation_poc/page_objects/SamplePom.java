@@ -8,6 +8,10 @@ import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.PageFactory;
 
+/**
+ *For demo only
+ */
+
 public class SamplePom extends Actions{
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Alert Views']")

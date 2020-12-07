@@ -7,6 +7,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ *For demo only
+ */
+
 public class ReportManager {
 
     public static ExtentReports getReporter() {

@@ -2,6 +2,9 @@ package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.f
 
 import java.util.HashMap;
 
+/**
+ *For demo only
+ */
 public class MobileCapabilities {
     public static HashMap<String,Object> getAndroidEmulatorCaps(){
         HashMap<String,Object> caps = new HashMap<>();

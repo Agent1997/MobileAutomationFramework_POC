@@ -3,6 +3,11 @@ package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.f
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
+
+/**
+ *For demo only
+ */
+
 public class AppiumServer {
     private AppiumServiceBuilder serviceBuilder = new AppiumServiceBuilder();
     private AppiumDriverLocalService server;

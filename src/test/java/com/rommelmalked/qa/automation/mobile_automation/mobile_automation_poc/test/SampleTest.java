@@ -11,6 +11,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+/**
+ *For demo only
+ */
+
 public class SampleTest {
     private AppiumDriver driver;
     private MobileDriverManager driverManager;

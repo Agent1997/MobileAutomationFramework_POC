@@ -9,6 +9,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 
+/**
+ *For demo only
+ */
+
 @Getter
 public class MobileDriverManager {
     private AppiumDriver driver;
