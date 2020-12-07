@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Sample Test on iOS and Android">
+    <listeners>
+        <listener class-name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.listeners.ListenersImpl"/>
+    </listeners>
+
+<!--    Uncomment the below code if you want to run on Android-->
+<!--    <test name = "Sample android Test1">-->
+<!--        <parameter name = "platformName" value="android"/>-->
+<!--        <classes>-->
+<!--            <class name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test.SampleTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--   Uncomment the below code if you want to run on iOS -->
+    <test name = "Sample ios Test2">
+        <parameter name = "platformName" value="ios"/>
+        <classes>
+            <class name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test.SampleTest"/>
+        </classes>
+    </test>
+</suite>
