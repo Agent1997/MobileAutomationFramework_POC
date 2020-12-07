@@ -9,7 +9,7 @@ public class MobileCapabilities {
     public static HashMap<String,Object> getAndroidEmulatorCaps(){
         HashMap<String,Object> caps = new HashMap<>();
         String appPath = System.getProperty("user.dir") + "/sample_apps/ApiDemos-debug.apk";
-//        caps.put("avd","Pixel_2_API_28");
+//        caps.put("avd","Pixel_2_API_28"); //This can be uncommented to automatically open your emulator, though I'm encountering issues on rerunning scripts
         caps.put("platformName","Android");
         caps.put("automationName","UiAutomator2");
         caps.put("app",appPath);
@@ -23,8 +23,8 @@ public class MobileCapabilities {
         caps.put("automationName","XCUITest");
         caps.put("app",appPath);
         caps.put("noReset",true);
-        caps.put("deviceName","iPhone Xr");
-        caps.put("platfromVersion","13.5");
+        caps.put("deviceName","iPhone Xr"); // Change the device name depending on what simulators is available to you
+        caps.put("platfromVersion","13.5"); // Update platformVersion Accordingly
         return caps;
     }
 
