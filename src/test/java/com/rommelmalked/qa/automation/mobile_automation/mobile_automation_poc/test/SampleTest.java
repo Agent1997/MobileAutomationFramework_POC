@@ -24,7 +24,7 @@ public class SampleTest {
     @Parameters("platformName")
     @BeforeClass
     public void setup(String platformName){
-        server = new AppiumServer();
+        server = new AppiumServer("4444");
         server.startServer();
         if(platformName.equalsIgnoreCase("android")){
             driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps(),server.getServer());

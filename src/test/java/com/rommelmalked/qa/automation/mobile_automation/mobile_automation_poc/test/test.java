@@ -11,6 +11,6 @@ public class test {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        sg.stop();
+//        sg.stop();
     }
 }

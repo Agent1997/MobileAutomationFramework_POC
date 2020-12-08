@@ -50,18 +50,26 @@
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
         <!--  This version is giving me a no method exception when instantiating GridHubConfiguration-->
-        <!--    <dependency>-->
-        <!--      <groupId>org.seleniumhq.selenium</groupId>-->
-        <!--      <artifactId>selenium-server</artifactId>-->
-        <!--      <version>4.0.0-alpha-2</version>-->
-        <!--    </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.seleniumhq.selenium</groupId>-->
+        <!--            <artifactId>selenium-server</artifactId>-->
+        <!--            <version>4.0.0-alpha-2</version>-->
+        <!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
-        <dependency>
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-server</artifactId>
-            <version>3.141.59</version>
-        </dependency>
+        <!--Having issue registering node using this version-->
+                <dependency>
+                    <groupId>org.seleniumhq.selenium</groupId>
+                    <artifactId>selenium-server</artifactId>
+                    <version>3.141.59</version>
+                </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+        <!--        <dependency>-->
+        <!--            <groupId>org.seleniumhq.selenium</groupId>-->
+        <!--            <artifactId>selenium-server</artifactId>-->
+        <!--            <version>3.141.5</version>-->
+        <!--        </dependency>-->
 
     </dependencies>
 

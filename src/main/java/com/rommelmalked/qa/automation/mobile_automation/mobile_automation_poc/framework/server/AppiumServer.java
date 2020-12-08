@@ -14,6 +14,12 @@ public class AppiumServer {
 
     public AppiumServer(){
         serviceBuilder.usingAnyFreePort();
+//        serviceBuilder.withArgument(ServerConfigFlags.NODE_CONFIG,"path to node cofig");
+        server = AppiumDriverLocalService.buildService(serviceBuilder);
+    }
+
+    public AppiumServer(String port){
+        serviceBuilder.usingPort(Integer.parseInt(port));
         server = AppiumDriverLocalService.buildService(serviceBuilder);
     }
 
