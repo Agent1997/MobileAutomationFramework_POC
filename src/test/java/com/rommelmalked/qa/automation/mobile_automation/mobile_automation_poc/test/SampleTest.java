@@ -4,7 +4,7 @@ import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.fr
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.driver.MobileCapabilities;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.driver.MobileDriverManager;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.server.AppiumServer;
-import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.page_objects.SamplePom;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.pageObjects.SamplePom;
 import io.appium.java_client.AppiumDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -24,7 +24,7 @@ public class SampleTest {
     @Parameters("platformName")
     @BeforeClass
     public void setup(String platformName){
-        server = new AppiumServer("4444");
+        server = new AppiumServer(4444);
         server.startServer();
         if(platformName.equalsIgnoreCase("android")){
             driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps(),server.getServer());

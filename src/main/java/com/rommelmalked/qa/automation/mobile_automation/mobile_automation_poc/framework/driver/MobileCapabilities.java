@@ -8,7 +8,7 @@ import java.util.HashMap;
 public class MobileCapabilities {
     public static HashMap<String,Object> getAndroidEmulatorCaps(){
         HashMap<String,Object> caps = new HashMap<>();
-        String appPath = System.getProperty("user.dir") + "/sample_apps/ApiDemos-debug.apk";
+        String appPath = System.getProperty("user.dir") + "/sampleApps/ApiDemos-debug.apk";
 //        caps.put("avd","Pixel_2_API_28"); //This can be uncommented to automatically open your emulator, though I'm encountering issues on rerunning scripts
         caps.put("platformName","Android");
         caps.put("automationName","UiAutomator2");
@@ -18,7 +18,7 @@ public class MobileCapabilities {
 
     public static HashMap<String,Object> getIOSSimulatorCaps(){
         HashMap<String,Object> caps = new HashMap<>();
-        String appPath = System.getProperty("user.dir") + "/sample_apps/UIKitCatalog.app";
+        String appPath = System.getProperty("user.dir") + "/sampleApps/UIKitCatalog.app";
         caps.put("platformName","iOS");
         caps.put("automationName","XCUITest");
         caps.put("app",appPath);

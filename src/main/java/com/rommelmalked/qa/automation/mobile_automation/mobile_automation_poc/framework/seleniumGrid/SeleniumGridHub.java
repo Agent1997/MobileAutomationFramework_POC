@@ -1,4 +1,4 @@
-package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.selenium_grid;
+package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.seleniumGrid;
 
 import org.openqa.grid.internal.utils.configuration.GridHubConfiguration;
 import org.openqa.grid.web.Hub;
@@ -15,6 +15,7 @@ public class SeleniumGridHub {
         gridHubConfiguration.host = "localhost";
         gridHubConfiguration.port = 4444;
     }
+
 
     public void start() {
         if (hub == null) {
