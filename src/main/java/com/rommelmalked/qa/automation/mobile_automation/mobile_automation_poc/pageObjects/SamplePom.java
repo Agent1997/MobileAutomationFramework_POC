@@ -12,6 +12,12 @@ import org.openqa.selenium.support.PageFactory;
  *For demo only
  */
 
+/*
+TODO: Find a way to get the locator used by the FindBy Annotations.
+ ref: https://xbuba.com/questions/41883224  These is already working on Test.java file.
+ Just make it cleaner.
+ */
+
 public class SamplePom extends Actions{
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Alert Views']")
