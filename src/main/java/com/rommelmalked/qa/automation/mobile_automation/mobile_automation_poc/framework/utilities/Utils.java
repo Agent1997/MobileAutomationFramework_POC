@@ -40,6 +40,6 @@ public class Utils {
     public static String generateFileName(String fileName){
         DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd_mm_yyyy_mm:ss");
         LocalDateTime now = LocalDateTime.now();
-        return "/" + fileName +"_" + dtf.format(now).toString();
+        return "/" + fileName +"_" + dtf.format(now);
     }
 }

@@ -4,7 +4,8 @@ import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.fr
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
-import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 
 
 /**
@@ -15,8 +16,7 @@ import java.io.File;
  */
 
 /*
-TODO Focus on improving this Appium server class
-TODO Find out how to not log on the console
+TODO Find a way to redirect log on a file then disable logging on console
  */
 
 public class AppiumServer {
@@ -29,21 +29,21 @@ public class AppiumServer {
      */
     public AppiumServer() {
         this.port = Utils.getAvailablePort();
-        this.serviceBuilder.usingPort(port)
-                .withLogFile(new File(Utils.getProjectDirectory() +"appiumLogs" + Utils.generateFileName("logs")));
-//        serviceBuilder.withArgument(ServerConfigFlags.NODE_CONFIG,"path to node config");
+        this.serviceBuilder.usingPort(port);
         this.server = AppiumDriverLocalService.buildService(serviceBuilder);
+        redirectLogTo("appiumLogs","Test", this.server);
     }
 
     public AppiumServer(int port) {
         this.port = port;
         this.serviceBuilder.usingPort(port);
         this.server = AppiumDriverLocalService.buildService(serviceBuilder);
+        redirectLogTo("appiumLogs", "Test", this.server);
+
     }
 
     public void startServer() {
         this.server.start();
-        this.server.clearOutPutStreams();
     }
 
     public void stopServer() {
@@ -54,7 +54,20 @@ public class AppiumServer {
         return this.server.isRunning();
     }
 
+    public AppiumServiceBuilder getServiceBuilder() {
+        return this.serviceBuilder;
+    }
+
     public AppiumDriverLocalService getServer() {
         return this.server;
+    }
+
+    private void redirectLogTo(String folderName, String fileName, AppiumDriverLocalService server) {
+        server.clearOutPutStreams();
+        try {
+            server.addOutPutStream(new FileOutputStream(Utils.getProjectDirectory() + folderName + Utils.generateFileName(fileName)));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
