@@ -1,6 +1,7 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test;
 
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.driver.MobileCapabilities;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.driver.MobileDriverManager;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileDriver;
 import io.appium.java_client.MobileElement;
@@ -30,7 +31,7 @@ class Test1 {
     public Test1(){
         MobileDriver driver = null;
         try {
-             driver = new AppiumDriver(MobileCapabilities.setCapsFromHashMap(MobileCapabilities.getAndroidEmulatorCaps()));
+             driver = new AppiumDriver(MobileDriverManager.setCapsFromHashMap(MobileCapabilities.getAndroidEmulatorCaps()));
         } catch (Exception e) {
             e.printStackTrace();
         }

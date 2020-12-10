@@ -3,6 +3,7 @@ package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.f
 import org.openqa.grid.internal.utils.configuration.GridHubConfiguration;
 import org.openqa.grid.web.Hub;
 
+//Ref: https://medium.com/@ar.xa.vasquez/how-to-register-an-appium-node-to-a-selenium-grid-546f08aadc66
 
 public class SeleniumGridHub {
     private GridHubConfiguration gridHubConfiguration;

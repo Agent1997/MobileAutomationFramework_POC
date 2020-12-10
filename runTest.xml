@@ -11,10 +11,10 @@
         </classes>
     </test>
 
-    <test name = "Sample ios Test2">
-        <parameter name = "platformName" value="ios"/>
-        <classes>
-            <class name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test.SampleTest"/>
-        </classes>
-    </test>
+<!--    <test name = "Sample ios Test2">-->
+<!--        <parameter name = "platformName" value="ios"/>-->
+<!--        <classes>-->
+<!--            <class name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test.SampleTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>

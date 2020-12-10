@@ -6,6 +6,7 @@ import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.fr
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.server.AppiumServer;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.pageObjects.SamplePom;
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -16,7 +17,7 @@ import org.testng.annotations.Test;
  */
 
 public class SampleTest {
-    private AppiumDriver driver;
+    private AppiumDriver<MobileElement> driver;
     private MobileDriverManager driverManager;
     private SamplePom samplePom;
     private AppiumServer server;

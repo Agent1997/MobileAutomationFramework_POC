@@ -1,6 +1,7 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.activities;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
@@ -53,6 +54,16 @@ public class Actions<T> {
             System.out.println(e);
         }
     }
+
+    protected void click(MobileElement element) {
+        try {
+            element.click();
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+
 
     protected boolean isPresent(By locator) {
         List<WebElement> el;
