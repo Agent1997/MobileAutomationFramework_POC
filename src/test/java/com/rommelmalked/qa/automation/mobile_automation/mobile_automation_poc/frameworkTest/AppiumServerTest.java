@@ -22,7 +22,8 @@ public class AppiumServerTest {
             e.printStackTrace();
         }
         System.out.println(ss.getLocalPort());
-        server.redirectLogTo("Sample log").startServer();
+//        server.redirectLogTo("Sample log").startServer();
+        server.startServer();
         server.stopServer();
 
     }

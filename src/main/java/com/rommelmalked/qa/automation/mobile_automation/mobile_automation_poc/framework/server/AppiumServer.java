@@ -16,6 +16,9 @@ import java.io.FileOutputStream;
  * Note: If you want to disable logging on console and log to a file instead.
  * Make sure to call redirectLogTo before starting the server.
  *
+ * There just one possible issue but I don't see any negative use case as of now. T
+ * Log files will be separate per AppiumServer object.
+ *
  * @author Agent1997
  */
 
@@ -59,6 +62,10 @@ public class AppiumServer {
 
     public AppiumDriverLocalService getServer() {
         return this.server;
+    }
+
+    public int getPort(){
+        return this.port;
     }
 
     private void redirectLogTo(String folderName, String fileName, AppiumDriverLocalService server) {
