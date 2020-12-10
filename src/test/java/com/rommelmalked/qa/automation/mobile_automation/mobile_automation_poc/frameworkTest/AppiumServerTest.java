@@ -22,7 +22,7 @@ public class AppiumServerTest {
             e.printStackTrace();
         }
         System.out.println(ss.getLocalPort());
-        server.startServer();
+        server.redirectLogTo("Sample log").startServer();
         server.stopServer();
 
     }
