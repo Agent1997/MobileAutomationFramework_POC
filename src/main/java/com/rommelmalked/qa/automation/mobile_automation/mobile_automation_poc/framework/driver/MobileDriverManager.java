@@ -3,6 +3,7 @@ package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.f
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
+import io.appium.java_client.service.local.AppiumServiceBuilder;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -13,16 +14,13 @@ import java.util.HashMap;
  * @author Agent1997
  */
 
-/*
-TODO Improve this class.
- Look on other possible way of creating the driver.
- Work on how to check the host where the server is running.
- */
+
 public class MobileDriverManager {
     private AppiumDriver<MobileElement> driver;
     private final DriverType driverType;
     private AppiumDriverLocalService server;
     private static final String DEFAULT_LOCAL_URL = "http://127.0.0.1:4723/wd/hub";
+    private AppiumServiceBuilder serviceBuilder;
 
     public MobileDriverManager(DriverType driverType, HashMap<String, Object> caps) {
         try {
@@ -40,6 +38,13 @@ public class MobileDriverManager {
         this.server = server;
     }
 
+    public MobileDriverManager(DriverType driverType, HashMap<String, Object> caps, AppiumServiceBuilder serviceBuilder) {
+        this.driver = new AppiumDriver<>(serviceBuilder, setCapsFromHashMap(caps));
+        this.driverType = driverType;
+        this.serviceBuilder = serviceBuilder;
+    }
+
+
     public AppiumDriver<MobileElement> getDriver() {
         return this.driver;
     }
@@ -50,6 +55,10 @@ public class MobileDriverManager {
 
     public AppiumDriverLocalService getServer() {
         return this.server;
+    }
+
+    public AppiumServiceBuilder getServiceBuilder(){
+        return this.serviceBuilder;
     }
 
     public void quitMobileDriver() {

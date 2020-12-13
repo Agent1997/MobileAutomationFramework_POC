@@ -19,6 +19,8 @@ import java.io.FileOutputStream;
  * There just one possible issue but I don't see any negative use case as of now. T
  * Log files will be separate per AppiumServer object.
  *
+ * Appium server will run on local host
+ *
  * @author Agent1997
  */
 
