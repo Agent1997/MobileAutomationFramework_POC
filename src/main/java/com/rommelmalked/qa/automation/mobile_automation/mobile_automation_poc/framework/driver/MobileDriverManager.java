@@ -1,16 +1,18 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.driver;
 
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.utilities.Utils;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.HashMap;
 
 /**
+ * NOTE: Make to stop appium server used by appium driver when quiting the driver
+ *
  * @author Agent1997
  */
 
@@ -22,9 +24,11 @@ public class MobileDriverManager {
     private static final String DEFAULT_LOCAL_URL = "http://127.0.0.1:4723/wd/hub";
     private AppiumServiceBuilder serviceBuilder;
 
+
+
     public MobileDriverManager(DriverType driverType, HashMap<String, Object> caps) {
         try {
-            this.driver = new AppiumDriver<>(new URL(DEFAULT_LOCAL_URL), setCapsFromHashMap(caps));
+            this.driver = new AppiumDriver<>(new URL(DEFAULT_LOCAL_URL), Utils.setCapsFromHashMap(caps));
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -33,19 +37,19 @@ public class MobileDriverManager {
     }
 
     public MobileDriverManager(DriverType driverType, HashMap<String, Object> caps, AppiumDriverLocalService server) {
-        this.driver = new AppiumDriver<>(server, setCapsFromHashMap(caps));
+        this.driver = new AppiumDriver<>(server, Utils.setCapsFromHashMap(caps));
         this.driverType = driverType;
         this.server = server;
     }
 
     public MobileDriverManager(DriverType driverType, HashMap<String, Object> caps, AppiumServiceBuilder serviceBuilder) {
-        this.driver = new AppiumDriver<>(serviceBuilder, setCapsFromHashMap(caps));
+        this.driver = new AppiumDriver<>(serviceBuilder, Utils.setCapsFromHashMap(caps));
         this.driverType = driverType;
         this.serviceBuilder = serviceBuilder;
     }
 
 
-    public AppiumDriver<MobileElement> getDriver() {
+    public AppiumDriver<MobileElement> getMobileDriver() {
         return this.driver;
     }
 
@@ -68,11 +72,5 @@ public class MobileDriverManager {
         }
     }
 
-    public static DesiredCapabilities setCapsFromHashMap(HashMap<String, Object> caps) {
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        for (String key : caps.keySet()) {
-            capabilities.setCapability(key, caps.get(key));
-        }
-        return capabilities;
-    }
+
 }

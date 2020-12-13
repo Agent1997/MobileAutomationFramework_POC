@@ -21,6 +21,9 @@ import java.io.FileOutputStream;
  *
  * Appium server will run on local host
  *
+ * NOTE: Seems that there is an issue with AppiumDriverLocalService start and stop methods,
+ * but code still works fine (Dec 13, 2020)
+ *
  * @author Agent1997
  */
 
@@ -38,12 +41,14 @@ public class AppiumServer {
         this.port = Utils.getAvailablePort();
         this.serviceBuilder.usingPort(port);
         this.server = AppiumDriverLocalService.buildService(serviceBuilder);
+        this.startServer();
     }
 
     public AppiumServer(int port) {
         this.port = port;
         this.serviceBuilder.usingPort(port);
         this.server = AppiumDriverLocalService.buildService(serviceBuilder);
+        this.startServer();
     }
 
     public AppiumServer startServer() {

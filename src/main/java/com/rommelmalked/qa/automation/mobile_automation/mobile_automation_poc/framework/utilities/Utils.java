@@ -1,9 +1,12 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.utilities;
 
+import org.openqa.selenium.remote.DesiredCapabilities;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
 
 /**
  * Contains all utilities and helper functions
@@ -42,5 +45,11 @@ public class Utils {
         return "/" + fileName +"_" + dtf.format(now);
     }
 
-
+    public static DesiredCapabilities setCapsFromHashMap(HashMap<String, Object> caps) {
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        for (String key : caps.keySet()) {
+            capabilities.setCapability(key, caps.get(key));
+        }
+        return capabilities;
+    }
 }

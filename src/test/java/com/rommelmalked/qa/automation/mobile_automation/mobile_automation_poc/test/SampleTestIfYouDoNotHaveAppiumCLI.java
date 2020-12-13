@@ -34,7 +34,7 @@ public class SampleTestIfYouDoNotHaveAppiumCLI {
             System.out.println(platformName);
         }
 //        driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps());
-        driver = driverManager.getDriver();
+        driver = driverManager.getMobileDriver();
         samplePom = new SamplePom(driver);
     }
 
