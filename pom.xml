@@ -45,8 +45,9 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>5.0.3</version>
+            <version>5.0.6</version>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
         <!--  This version is giving me a no method exception when instantiating GridHubConfiguration-->
@@ -63,6 +64,12 @@
                     <artifactId>selenium-server</artifactId>
                     <version>3.141.59</version>
                 </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+            <scope>compile</scope>
+        </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
         <!--        <dependency>-->

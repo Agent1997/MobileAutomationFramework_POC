@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Sample reporter Test">
+    <listeners>
+        <listener
+                class-name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.reports.ITestListenerImpl"/>
+    </listeners>
+
+
+    <test name="Reporter Test 1">
+        <classes>
+            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
+            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
+        </classes>
+    </test>
+
+<!--    <test name="Reporter Test 3">-->
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Reporter Test 2">-->
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>

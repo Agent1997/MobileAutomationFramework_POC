@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- *For demo only
+ *NOTE: You can use TestNG @BeforeSuite and @AfterSuite for initializing and cleaning reports
  */
 
 public class ReportManager {
