@@ -41,6 +41,12 @@ public class ExtentReporter {
         return test;
     }
 
+    public static synchronized ExtentTest createTest(String testName, String desc, String categoryName, String author) {
+        ExtentTest test = extentReports.createTest(testName, desc).assignCategory(categoryName).assignAuthor(author);
+        extentTestMap.put((int)(Thread.currentThread().getId()), test);
+        return test;
+    }
+
 
 
 

@@ -6,6 +6,7 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 
 public class TestListenerImpl extends BaseTestImpl implements ITestListener{
+
     @Override
     public void onTestStart(ITestResult iTestResult) {
         System.out.println("onTestStart");
@@ -36,6 +37,7 @@ public class TestListenerImpl extends BaseTestImpl implements ITestListener{
     @Override
     public void onStart(ITestContext iTestContext) {
         System.out.println("onStart");
+
     }
 
     @Override

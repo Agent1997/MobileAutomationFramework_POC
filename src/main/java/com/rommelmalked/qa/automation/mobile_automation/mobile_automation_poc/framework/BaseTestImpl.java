@@ -11,6 +11,7 @@ import org.testng.annotations.*;
 public class BaseTestImpl {
     protected String category;
 
+
     /*
     NOTE: You can try configuring / setting up selenium grid on Before Suite
      */
@@ -24,6 +25,7 @@ public class BaseTestImpl {
         System.out.println("Setting up test");
     }
 
+    //Setting category here to be used by test classes to label tests
     @BeforeClass
     @Parameters("category")
     public void setupClass(String category) {

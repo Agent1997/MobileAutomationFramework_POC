@@ -9,14 +9,14 @@ import static org.testng.Assert.assertTrue;
 public class ReporterTest6 extends BaseTestImpl {
     @Test
     public void ReporterTest6test1(){
-        ExtentReporter.createTest("Test","ReporterTest6 sample test1",category);
+        ExtentReporter.createTest("testName","ReporterTest6 sample test1",category);
 
         assertTrue(false);
     }
 
     @Test
     public void ReporterTest6test2(){
-        ExtentReporter.createTest("Test","ReporterTest6 sample test2",category);
+        ExtentReporter.createTest("testName","ReporterTest6 sample test2",category);
         assertTrue(true);
     }
 }

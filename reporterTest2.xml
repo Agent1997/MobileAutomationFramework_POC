@@ -6,30 +6,30 @@
     </listeners>
 
 
-    <test name="Reporter Test 1">
-        <parameter name="category" value="ReporterTest5 Test "/>
+<!--    <test name="Reporter Test 1">-->
+<!--        <parameter name="category" value="ReporterTest5 Test "/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest5"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest5"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 4">
-        <parameter name="category" value="ReporterTest5 Test "/>
+<!--    <test name="Reporter Test 4">-->
+<!--        <parameter name="category" value="ReporterTest5 Test "/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest5"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest5"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 
-    <test name="Reporter Test 2">
-        <parameter name="category" value="ReporterTest6 Test "/>
+<!--    <test name="Reporter Test 2">-->
+<!--        <parameter name="category" value="ReporterTest6 Test "/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest6"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest6"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
     <test name="Reporter Test 3">
         <parameter name="category" value="ReporterTest7 Test "/>
