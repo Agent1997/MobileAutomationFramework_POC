@@ -6,18 +6,17 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-public class ReporterTest4 extends BaseTestImpl {
-
+public class ReporterTest5 extends BaseTestImpl {
     @Test
-    public void test1(){
-        ExtentReporter.createTest("Test","sample test1",category);
+    public void ReporterTest5test1(){
+        ExtentReporter.createTest("Test","ReporterTest5 sample test1",category);
 
         assertTrue(false);
     }
 
     @Test
-    public void test2(){
-        ExtentReporter.createTest("Test","sample test1",category);
+    public void ReporterTest5test2(){
+        ExtentReporter.createTest("Test","ReporterTest5 sample test2",category);
         assertTrue(true);
     }
 }

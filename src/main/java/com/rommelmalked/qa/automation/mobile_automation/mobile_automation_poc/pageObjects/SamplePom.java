@@ -9,7 +9,8 @@ import io.appium.java_client.pagefactory.iOSXCUITFindBy;
 import org.openqa.selenium.support.PageFactory;
 
 /**
- *For demo only
+ *Good reference for implementing page factory on page objects
+ *https://www.toolsqa.com/selenium-webdriver/page-object-pattern-model-page-factory/#:~:text=By%20using%20the%20Page%20Object,create%20tests%20with%20less%20keystroke
  */
 
 /*

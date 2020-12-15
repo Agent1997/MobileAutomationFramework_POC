@@ -33,14 +33,15 @@ public class ReporterTest1 extends BaseTestImpl {
 
     @Test
     public void test1(){
-        ExtentReporter.createTest("Test","sample test1");
+        ExtentReporter.createTest("Test","sample test1",category);
+
         assertTrue(false);
     }
 
     @Test
     public void test2(){
-        ExtentReporter.createTest("Test","sample test1");
-        assertTrue(false);
+        ExtentReporter.createTest("Test","sample test1",category);
+        assertTrue(true);
     }
 
 //    @Test

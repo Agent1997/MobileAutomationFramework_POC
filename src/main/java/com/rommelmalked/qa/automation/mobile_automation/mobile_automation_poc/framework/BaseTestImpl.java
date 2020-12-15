@@ -5,48 +5,45 @@ import org.testng.annotations.*;
 
 
 /*
- *TODO Continue working on reporting. Find out a way to generate a single report for one
- * suite with with multiple test and multiple classes inside that test.
- * Checkout Testng lifecycle
+ *TODO Continue working on reporting.
+ * Find a way to create a node for every testng test
  */
-public class BaseTestImpl implements IBaseTest {
+public class BaseTestImpl {
+    protected String category;
 
     /*
     NOTE: You can try configuring / setting up selenium grid on Before Suite
      */
     @BeforeSuite
-    @Override
     public void setUpSuite() {
         System.out.println("Setting up suite");
     }
 
     @BeforeTest
-    @Override
     public void setUpTest() {
         System.out.println("Setting up test");
     }
 
     @BeforeClass
-    @Override
-    public void setupClass() {
+    @Parameters("category")
+    public void setupClass(String category) {
         System.out.println("Setting up class");
-//        this.extentReports.createTest("test").pass("passed");
+        this.category = category;
+
+
     }
 
     @AfterClass
-    @Override
     public void tearDownClass() {
         System.out.println("Tear down class");
     }
 
     @AfterTest
-    @Override
     public void tearDownTest() {
         System.out.println("Tear down test");
     }
 
     @AfterSuite
-    @Override
     public void tearDownSuite() {
         System.out.println("Tear down suite");
         ExtentReporter.getExtentReports().flush();
