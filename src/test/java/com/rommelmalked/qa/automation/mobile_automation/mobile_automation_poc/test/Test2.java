@@ -13,9 +13,12 @@ public class Test2 {
 //        driver.quit();
 //        server.stopServer();
 
-        for(int i = 0; i < 5; i++){
-            number = i;
-            System.out.println(number);
-        }
+//        for(int i = 0; i < 5; i++){
+//            number = i;
+//            System.out.println(number);
+//        }
+
+        System.out.println(Thread.currentThread().getId());
+        System.out.println(Thread.currentThread().getId());
     }
 }
