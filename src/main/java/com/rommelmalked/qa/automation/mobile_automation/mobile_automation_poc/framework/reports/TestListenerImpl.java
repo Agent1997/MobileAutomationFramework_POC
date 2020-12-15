@@ -5,6 +5,16 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+
+/*
+TODO improver reporting
+ find a way to get the name of the calling method
+ work on handling test failed. getting screenshots
+ work on being able to rerun failed test cases only
+ try extent report filters
+ beatutify reports
+ see if we can deploy the test result to remore repository so that everyone can access the report on their web
+ */
 public class TestListenerImpl extends BaseTestImpl implements ITestListener{
 
     @Override

@@ -8,6 +8,7 @@ import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.fr
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class ExtentReporter {
     private static ExtentReports extentReports = generateReporter();
     private static Map extentTestMap = new HashMap();
