@@ -43,10 +43,10 @@ public class ExtentReporter {
     Will comment out this method for now. Uncomment it once useable.
      */
 
-    public static synchronized ExtentTest createTest(String testName, String description) {
-        ExtentTest test = extentReports.createTest(testName,description);
-        extentTestMap.put((int)(Thread.currentThread().getId()), test);
-        return test;
-    }
+//    public static synchronized ExtentTest createTest(String testName, String description) {
+//        ExtentTest test = extentReports.createTest(testName,description);
+//        extentTestMap.put((int)(Thread.currentThread().getId()), test);
+//        return test;
+//    }
 
 }
