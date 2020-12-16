@@ -9,15 +9,15 @@ import static org.testng.Assert.assertTrue;
 public class ReporterTest4 extends BaseTestImpl {
 
     @Test
-    public void test1(){
-        ExtentReporter.createTest("Test","sample test1",category);
+    public void ReporterTest4test1(){
+        ExtentReporter.getTest().assignAuthor("Rommel").assignCategory(category);
 
         assertTrue(false);
     }
 
     @Test
-    public void test2(){
-        ExtentReporter.createTest("Test","sample test1",category);
-        assertTrue(true);
+    public void ReporterTest4test2(){
+        ExtentReporter.getTest().assignAuthor("Rommel").assignCategory(category);
+        assertTrue(false);
     }
 }

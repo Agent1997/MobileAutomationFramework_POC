@@ -1,6 +1,5 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest;
 
-import com.aventstack.extentreports.ExtentTest;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.BaseTestImpl;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.reports.ExtentReporter;
 import org.testng.annotations.Test;
@@ -10,7 +9,7 @@ import static org.testng.Assert.assertTrue;
 public class ReporterTest5 extends BaseTestImpl {
     @Test
     public void ReporterTest5test1(){
-        ExtentTest test = ExtentReporter.createTest("testName","ReporterTest5 sample test1",category,"Rommel");
+        ExtentReporter.getTest().assignAuthor("Rommel").assignCategory(category);
 
         assertTrue(false);
 
@@ -18,7 +17,7 @@ public class ReporterTest5 extends BaseTestImpl {
 
     @Test
     public void ReporterTest5test2(){
-        ExtentReporter.createTest("testName","ReporterTest5 sample test2",category);
+        ExtentReporter.getTest().assignAuthor("Rommel").assignCategory(category);
         assertTrue(true);
     }
 }

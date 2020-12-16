@@ -1,6 +1,7 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.utilities;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.ITestResult;
 
 import java.io.IOException;
 import java.net.ServerSocket;
@@ -51,5 +52,9 @@ public class Utils {
             capabilities.setCapability(key, caps.get(key));
         }
         return capabilities;
+    }
+
+    public static String getTestNGTestMethodName(ITestResult iTestResult) {
+        return iTestResult.getMethod().getConstructorOrMethod().getName();
     }
 }

@@ -31,8 +31,7 @@ public class BaseTestImpl {
     public void setupClass(String category) {
         System.out.println("Setting up class");
         this.category = category;
-
-
+        System.out.println("Category: " + this.category);
     }
 
     @AfterClass
@@ -48,6 +47,7 @@ public class BaseTestImpl {
     @AfterSuite
     public void tearDownSuite() {
         System.out.println("Tear down suite");
+//        ExtentReporter.getExtentTestMap().forEach((key, value) -> System.out.println(key + " " + value));
         ExtentReporter.getExtentReports().flush();
     }
 

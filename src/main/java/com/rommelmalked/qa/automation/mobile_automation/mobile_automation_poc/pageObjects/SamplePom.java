@@ -1,6 +1,6 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.pageObjects;
 
-import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.activities.Actions;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.Actions;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;

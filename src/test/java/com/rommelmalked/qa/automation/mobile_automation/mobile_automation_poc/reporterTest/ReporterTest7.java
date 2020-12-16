@@ -11,14 +11,17 @@ public class ReporterTest7 extends BaseTestImpl {
 
     @Test
     public void ReporterTest7test1(){
-        ExtentReporter.createTest("ReporterTest7test1","ReporterTest7 sample test1",category);
+//        ExtentReporter.createTest("Test");
+        ExtentReporter.getTest().assignAuthor("Rommel").assignCategory(category);
 
         assertTrue(false);
     }
 
     @Test
     public void ReporterTest7test2(){
-        ExtentReporter.createTest("ReporterTest7test2","ReporterTest7 sample test2",category);
+//        ExtentReporter.createTest("Test");
+        ExtentReporter.getTest().assignAuthor("Rommel").assignCategory(category);
+
         assertTrue(true);
     }
 }

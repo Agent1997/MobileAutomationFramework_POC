@@ -12,12 +12,11 @@
         <classes>
             <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
             <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest5"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest6"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest7"/>-->
         </classes>
     </test>
 
@@ -30,131 +29,129 @@
             <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
             <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
             <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
+            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest5"/>
+            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest6"/>
+            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest7"/>
         </classes>
     </test>
 
-    <test name="Reporter Test 3">
-        <parameter name="category" value="Reporter Test 3"/>
+<!--    <test name="Reporter Test 3">-->
+<!--        <parameter name="category" value="Reporter Test 3"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest5"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest6"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest7"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 4">
-        <parameter name="category" value="Reporter Test 4"/>
+<!--    <test name="Reporter Test 4">-->
+<!--        <parameter name="category" value="Reporter Test 4"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 5">
-        <parameter name="category" value="Reporter Test 5"/>
+<!--    <test name="Reporter Test 5">-->
+<!--        <parameter name="category" value="Reporter Test 5"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 6">
-        <parameter name="category" value="Reporter Test 6"/>
+<!--    <test name="Reporter Test 6">-->
+<!--        <parameter name="category" value="Reporter Test 6"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 7">
-        <parameter name="category" value="Reporter Test 7"/>
+<!--    <test name="Reporter Test 7">-->
+<!--        <parameter name="category" value="Reporter Test 7"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 8">
-        <parameter name="category" value="Reporter Test 8"/>
+<!--    <test name="Reporter Test 8">-->
+<!--        <parameter name="category" value="Reporter Test 8"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 9">
-        <parameter name="category" value="Reporter Test 9"/>
+<!--    <test name="Reporter Test 9">-->
+<!--        <parameter name="category" value="Reporter Test 9"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
-    <test name="Reporter Test 10">
-        <parameter name="category" value="Reporter Test 10"/>
+<!--    <test name="Reporter Test 10">-->
+<!--        <parameter name="category" value="Reporter Test 10"/>-->
 
-        <classes>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>
-            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>
-        </classes>
-    </test>
+<!--        <classes>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest1"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest2"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest3"/>-->
+<!--            <class name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.reporterTest.ReporterTest4"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 
 </suite>

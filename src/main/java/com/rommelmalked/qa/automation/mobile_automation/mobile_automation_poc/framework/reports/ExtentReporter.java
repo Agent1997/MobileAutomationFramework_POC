@@ -15,40 +15,38 @@ public class ExtentReporter {
     private static final String reportsFolderLoc = "extentReports";
     private static final String baseFileName = "ExecutionReport";
 
-    private static ExtentReports generateReporter(){
+    private static ExtentReports generateReporter() {
         ExtentReports reporter = new ExtentReports();
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(Utils.getProjectDirectory() + reportsFolderLoc + "/" + Utils.generateFileName(baseFileName) + ".html");
         reporter.attachReporter(sparkReporter);
         return reporter;
     }
 
-    public static ExtentReports getExtentReports(){
+    public static ExtentReports getExtentReports() {
         return extentReports;
     }
 
     public static synchronized ExtentTest getTest() {
-        return (ExtentTest) extentTestMap.get((int)(Thread.currentThread().getId()));
+        return (ExtentTest) extentTestMap.get((int) (Thread.currentThread().getId()));
     }
 
-    public static synchronized ExtentTest createTest(String testName, String desc) {
-        ExtentTest test = extentReports.createTest(testName, desc);
-        extentTestMap.put((int)(Thread.currentThread().getId()), test);
+
+    public static synchronized ExtentTest createTest(String testName) {
+        ExtentTest test = extentReports.createTest(testName);
+        extentTestMap.put((int) (Thread.currentThread().getId()), test);
         return test;
     }
 
-    public static synchronized ExtentTest createTest(String testName, String desc, String categoryName) {
-        ExtentTest test = extentReports.createTest(testName, desc).assignCategory(categoryName);
+    /*
+    NOTE: All create test will be done in the listeners. But if you will use this, createTest should
+    be used in test methods and all create test in the listeners should be removed.
+    Will comment out this method for now. Uncomment it once useable.
+     */
+
+    public static synchronized ExtentTest createTest(String testName, String description) {
+        ExtentTest test = extentReports.createTest(testName,description);
         extentTestMap.put((int)(Thread.currentThread().getId()), test);
         return test;
     }
-
-    public static synchronized ExtentTest createTest(String testName, String desc, String categoryName, String author) {
-        ExtentTest test = extentReports.createTest(testName, desc).assignCategory(categoryName).assignAuthor(author);
-        extentTestMap.put((int)(Thread.currentThread().getId()), test);
-        return test;
-    }
-
-
-
 
 }
