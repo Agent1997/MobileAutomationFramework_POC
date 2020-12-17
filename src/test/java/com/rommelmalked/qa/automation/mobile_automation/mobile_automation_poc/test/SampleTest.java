@@ -10,6 +10,7 @@ import static org.testng.Assert.assertTrue;
  */
 
 public class SampleTest extends BaseTestImpl {
+
     @Test
     public void sampleTestRun(){
         samplePom.clickButton();

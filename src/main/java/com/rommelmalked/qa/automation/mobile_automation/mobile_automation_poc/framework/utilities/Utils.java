@@ -115,5 +115,11 @@ public class Utils {
         return false;
     }
 
+    public static void generateAllureReports(){
+        String command = "allure serve " + getProjectDirectory() + "allure-results";
+        Thread task = new Thread(new RuntimeRunnable(command));
+        task.start();
+    }
+
 
 }

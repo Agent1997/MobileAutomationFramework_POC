@@ -17,7 +17,6 @@ public class TestListenerImpl extends BaseTestImpl implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult iTestResult) {
-        System.out.println("onTestStart");
         ExtentReporter.createTest(Utils.getTestNGTestMethodName(iTestResult));
     }
 
@@ -28,17 +27,13 @@ public class TestListenerImpl extends BaseTestImpl implements ITestListener {
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
-
         Utils.getAndSaveScreenShot(iTestResult,"Screenshots",Utils.getTestNGTestMethodName(iTestResult));
         //ExtentReports log and screenshot operations for failed tests.
         ExtentReporter.getTest().fail( Utils.getThrownAssertionError(iTestResult),Utils.getBase64ScreenShotMedia(iTestResult));
-
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
-        System.out.println("onTestSkipped");
-        ExtentReporter.createTest(Utils.getTestNGTestMethodName(iTestResult));
     }
 
     @Override

@@ -5,6 +5,7 @@ import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.fr
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.driver.MobileDriverManager;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.reports.ExtentReporter;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.server.AppiumServer;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.utilities.Utils;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.pageObjects.SamplePom;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -43,16 +44,13 @@ public class BaseTestImpl {
     @BeforeClass
     @Parameters({"category","platformName"})
     public void setupClass(String category,String platformName) {
-        System.out.println("Setting up class");
         server = new AppiumServer(4444);
         server.startServer();
         if(platformName.equalsIgnoreCase("android")){
             driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps(),server.getServer());
-            System.out.println(platformName);
         }
         if(platformName.equalsIgnoreCase("ios")){
             driverManager = new MobileDriverManager(DriverType.IOS, MobileCapabilities.getIOSSimulatorCaps(),server.getServer());
-            System.out.println(platformName);
         }
 //        driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps());
         driver = driverManager.getMobileDriver();
@@ -61,9 +59,8 @@ public class BaseTestImpl {
 
     @AfterClass
     public void tearDownClass() {
-        System.out.println("Tear down class");
-//        driver.quit();
-//        server.stopServer();
+        driver.quit();
+        server.stopServer();
     }
 
     @AfterTest
@@ -76,6 +73,7 @@ public class BaseTestImpl {
         System.out.println("Tear down suite");
 //        ExtentReporter.getExtentTestMap().forEach((key, value) -> System.out.println(key + " " + value));
         ExtentReporter.getExtentReports().flush();
+        Utils.generateAllureReports();
     }
 
 }
