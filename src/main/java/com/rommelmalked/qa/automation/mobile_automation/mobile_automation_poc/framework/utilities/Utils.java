@@ -115,6 +115,7 @@ public class Utils {
         return false;
     }
 
+    //TODO Check on this. Thread is not closing automatically
     public static void generateAllureReports(){
         String command = "allure serve " + getProjectDirectory() + "allure-results";
         Thread task = new Thread(new RuntimeRunnable(command));
