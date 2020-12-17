@@ -1,6 +1,6 @@
-package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.reports;
+package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework;
 
-import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.BaseTestImpl;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.reports.ExtentReporter;
 import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.utilities.Utils;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
@@ -8,10 +8,10 @@ import org.testng.ITestResult;
 
 
 /*
-TODO improver reporting
- try extent report filters
- beatutify reports
+TODO improve reporting
+ beautify reports
  see if we can deploy the test result to remote repository so that everyone can access the report on their web
+ Reports already good.
  */
 public class TestListenerImpl extends BaseTestImpl implements ITestListener {
 
@@ -49,8 +49,6 @@ public class TestListenerImpl extends BaseTestImpl implements ITestListener {
     @Override
     public void onStart(ITestContext iTestContext) {
         System.out.println("onStart");
-
-
     }
 
     @Override

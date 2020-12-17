@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import static org.testng.Assert.assertTrue;
 
-//@Listeners(ITestListenerImpl.class)
 public class ReporterTest1 extends BaseTestImpl {
 
     @Test

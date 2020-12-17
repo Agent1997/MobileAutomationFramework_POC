@@ -2,7 +2,7 @@
 <suite name="Sample reporter Test 2">
     <listeners>
         <listener
-                class-name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.reports.TestListenerImpl"/>
+                class-name="com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.TestListenerImpl"/>
     </listeners>
 
 

@@ -12,38 +12,23 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 /**
- *For demo only
+ *TODO work on handling all commonly used actions
  */
-public class Actions<T> {
+public class Actions {
     private AppiumDriver driver;
-    private T locators;
-//    Logger logger = LogManager.getLogger(CallingClass.getCallerClassName(Actions.class));
 
-
-    public Actions(AppiumDriver driver, Class<T> locators) {
-        this.driver = driver;
-        try {
-            this.locators = locators.getDeclaredConstructor().newInstance();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
 
     public Actions(AppiumDriver driver) {
         this.driver = driver;
     }
 
+
     protected void click(By locator) {
 
         try {
-//            driver.findElement(locator).click();
-//            logger.info("Clicking" + locator.toString());
             getElement(locator).click();
         } catch (NoSuchElementException e) {
-//            System.out.println("Element locator \""
-//                    + locator + "\" declared in "
-//                    + CallingClass.getCallerClassName(Actions.class) +
-//                    " does not exist in the current DOM");
+            e.printStackTrace();
         }
     }
 
@@ -80,18 +65,9 @@ public class Actions<T> {
         return false;
     }
 
-    protected T getLocator() {
-//        logger.info("Getting locators of " + locators.getClass().getSimpleName());
-        return locators;
-    }
 
     protected WebElement getElement(By locator) {
-//        logger.info("Getting element with locator: " + locator);
         WebDriverWait wait = new WebDriverWait(driver, 10);
-
-        //just added try catch to retry finding in case first attempt to find element failed
-        //Original code w/o try catch
-        //return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
         try {
             return driver.findElement(locator);
         } catch (Exception err) {
@@ -118,7 +94,6 @@ public class Actions<T> {
     }
 
     protected void enterText(By locator, String text) {
-//        logger.info("Entering text: " + text);
         getElement(locator).sendKeys(text);
     }
 
@@ -144,7 +119,6 @@ public class Actions<T> {
     }
 
     protected boolean isAt(String pageTitle, String specialText, By specialTextLoc, By... locators) {
-//        System.out.println(driver.getTitle().equalsIgnoreCase(pageTitle));
         if (pageTitle != null) {
             if (!driver.getTitle().equalsIgnoreCase(pageTitle)) {
                 return false;
@@ -152,18 +126,15 @@ public class Actions<T> {
         }
 
         for (By loc : locators) {
-//            System.out.println(loc.toString());
             if (!isPresent(loc)) {
                 return false;
             }
         }
 
-//        System.out.println(isPresent(specialTextLoc));
         if (!isPresent(specialTextLoc)) {
             return false;
         }
 
-//        System.out.println(getElement(specialTextLoc).getText().equalsIgnoreCase(specialText));
         if (!getElement(specialTextLoc).getText().equalsIgnoreCase(specialText)) {
             return false;
         }

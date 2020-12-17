@@ -62,8 +62,8 @@ public class BaseTestImpl {
     @AfterClass
     public void tearDownClass() {
         System.out.println("Tear down class");
-        driver.quit();
-        server.stopServer();
+//        driver.quit();
+//        server.stopServer();
     }
 
     @AfterTest
