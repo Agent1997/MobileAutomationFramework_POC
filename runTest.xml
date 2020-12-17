@@ -5,6 +5,21 @@
     </listeners>
 
     <test name = "Sample android Test1">
+        <parameter name="category" value="android"/>
+        <parameter name = "platformName" value="android"/>
+        <classes>
+            <class name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test.SampleTest"/>
+        </classes>
+    </test>
+    <test name = "Sample android Test2">
+        <parameter name="category" value="android"/>
+        <parameter name = "platformName" value="android"/>
+        <classes>
+            <class name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test.SampleTest"/>
+        </classes>
+    </test>
+    <test name = "Sample android Test3">
+        <parameter name="category" value="android"/>
         <parameter name = "platformName" value="android"/>
         <classes>
             <class name = "com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test.SampleTest"/>

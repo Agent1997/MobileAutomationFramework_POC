@@ -1,0 +1,2 @@
+For details in testng configuration window in intelliJ
+https://www.jetbrains.com/help/idea/run-debug-configuration-testng.html#config

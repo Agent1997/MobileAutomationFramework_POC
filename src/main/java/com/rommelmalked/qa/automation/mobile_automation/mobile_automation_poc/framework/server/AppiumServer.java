@@ -80,9 +80,11 @@ public class AppiumServer {
         server.clearOutPutStreams();
         File directory = new File(Utils.getProjectDirectory() + folderName);
 
-        if (!directory.exists()) {
-            directory.mkdir();
-        }
+//        if (!directory.exists()) {
+//            directory.mkdir();
+//        }
+//        Commenting out above code, change by below code
+        Utils.makeDirIfItDoNotExist(directory);
 
         try {
             server.addOutPutStream(new FileOutputStream(Utils.getProjectDirectory() + folderName + Utils.generateFileName(fileName)));
