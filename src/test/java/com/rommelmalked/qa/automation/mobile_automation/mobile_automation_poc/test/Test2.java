@@ -1,9 +1,13 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.test;
 
-public class Test2 {
-    private static int number;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.BaseTestImpl;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.pageObjects.AssertInConst;
+import org.testng.annotations.Test;
 
-    public static void main(String[] args) {
+public class Test2 extends BaseTestImpl {
+//    private static int number;
+
+//    public static void main(String[] args) {
 //        AppiumServer server = new AppiumServer();
 //        MobileDriverManager driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps(),server.getServer());
 //        AppiumDriver<MobileElement> driver =  driverManager.getMobileDriver();
@@ -19,6 +23,12 @@ public class Test2 {
 //            System.out.println(number);
 //        }
 
+//    }
+
+    @Test
+    public void sampletest(){
+        AssertInConst assertInConst = new AssertInConst();
     }
+
 
 }

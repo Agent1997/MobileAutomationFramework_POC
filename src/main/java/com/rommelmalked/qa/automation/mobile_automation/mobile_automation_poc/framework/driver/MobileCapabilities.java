@@ -34,11 +34,10 @@ public class MobileCapabilities {
 //        caps.put("avd","Pixel_2_API_28"); //This can be uncommented to automatically open your emulator, though I'm encountering issues on rerunning scripts
         caps.put("platformName", "Android");
         caps.put("automationName", "UiAutomator2");
-        caps.put("appPackage","com.facebook.katana");
-//        caps.put("appPackage", "com.shopee.ph");
+//        caps.put("appPackage","com.facebook.katana");
+        caps.put("appPackage", "com.shopee.ph");
 //        caps.put("appActivity","com.facebook.account.login.activity.SimpleLoginActivity");
         caps.put("appActivity", "com.shopee.app.ui.home.HomeActivity_");
         return caps;
     }
-
 }
