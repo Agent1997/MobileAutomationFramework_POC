@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 //Refs: https://www.selenium.dev/documentation/en/webdriver/waits/
+//https://bitbar.com/blog/appium-tip-19-explore-how-to-interact-with-elements/
 public class Waits {
     private final AppiumDriver<WebElement> mobileDriver;
     private final WebDriverWait wait;
@@ -19,25 +20,26 @@ public class Waits {
         this.wait = new WebDriverWait(this.mobileDriver,waitDurationInSeconds);
     }
 
-    public WebElement waitVisibility(By elementByLocator){
-        return this.wait.
+    public MobileElement waitVisibility(By elementByLocator){
+        return (MobileElement)this.wait.
                 until(ExpectedConditions.
                         visibilityOfElementLocated(elementByLocator));
     }
 
-    public WebElement waitVisibility(MobileElement element){
-        return this.wait.
+    public MobileElement waitVisibility(MobileElement element){
+
+        return (MobileElement)this.wait.
                 until(ExpectedConditions.visibilityOf(element));
     }
 
-    public WebElement waitClickability(By elementByLocator){
-        return this.wait.
+    public MobileElement waitClickability(By elementByLocator){
+        return (MobileElement)this.wait.
                 until(ExpectedConditions.
                         elementToBeClickable(elementByLocator));
     }
 
-    public WebElement waitClickability(WebElement element){
-        return this.wait.
+    public MobileElement waitClickability(WebElement element){
+        return (MobileElement)this.wait.
                 until(ExpectedConditions.
                         elementToBeClickable(element));
     }
