@@ -116,10 +116,12 @@ public class Utils {
     }
 
     //TODO Check on this. Thread is not closing automatically
+    //Do not focus too much on this, since you can generate report via Command Line
     public static void generateAllureReports(){
         String command = "allure serve " + getProjectDirectory() + "allure-results";
         Thread task = new Thread(new RuntimeRunnable(command));
         task.start();
+        task.interrupt();
     }
 
 

@@ -1,12 +1,10 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.pageObjects;
 
-import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.Actions;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.BasePageObject;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import io.appium.java_client.pagefactory.iOSXCUITFindBy;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  *Good reference for implementing page factory on page objects
@@ -19,19 +17,18 @@ TODO: Find a way to get the locator used by the FindBy Annotations.
  Just make it cleaner.
  */
 
-public class SamplePom extends Actions{
+public class SamplePom extends BasePageObject {
 
     @iOSXCUITFindBy(xpath = "//XCUIElementTypeStaticText[@name='Alert Views']")
     @AndroidFindBy(xpath = "//android.widget.TextView[@content-desc='Media']")
     private MobileElement sampleBtn;
 
-    public SamplePom(AppiumDriver driver){
+    public SamplePom(AppiumDriver<MobileElement> driver){
         super(driver);
-        PageFactory.initElements(new AppiumFieldDecorator(driver),this);
     }
 
     public void clickButton() {
-        click(sampleBtn);
+        actions.click(sampleBtn);
     }
 
 

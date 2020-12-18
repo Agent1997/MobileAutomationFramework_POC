@@ -23,7 +23,7 @@ public class Actions {
     }
 
 
-    protected void click(By locator) {
+    public void click(By locator) {
 
         try {
             getElement(locator).click();
@@ -32,7 +32,7 @@ public class Actions {
         }
     }
 
-    protected void click(WebElement element) {
+    public void click(WebElement element) {
         try {
             element.click();
         } catch (Exception e) {
@@ -40,7 +40,7 @@ public class Actions {
         }
     }
 
-    protected void click(MobileElement element) {
+    public void click(MobileElement element) {
         try {
             element.click();
         } catch (Exception e) {
@@ -50,7 +50,7 @@ public class Actions {
 
 
 
-    protected boolean isPresent(By locator) {
+    public boolean isPresent(By locator) {
         List<WebElement> el;
         try {
             el = driver.findElements(locator);
@@ -66,7 +66,7 @@ public class Actions {
     }
 
 
-    protected WebElement getElement(By locator) {
+    public WebElement getElement(By locator) {
         WebDriverWait wait = new WebDriverWait(driver, 10);
         try {
             return driver.findElement(locator);
@@ -75,50 +75,50 @@ public class Actions {
         }
     }
 
-    protected String getText(WebElement element) {
+    public String getText(WebElement element) {
         return element.getText();
     }
 
-    protected List<WebElement> getElements(By locator) {
+    public List<WebElement> getElements(By locator) {
         return driver.findElements(locator);
     }
 
-    protected void hoverToElementAndClickOn(By hoverToElementLocator, By clickOnElementLocator) {
+    public void hoverToElementAndClickOn(By hoverToElementLocator, By clickOnElementLocator) {
         org.openqa.selenium.interactions.Actions action = new org.openqa.selenium.interactions.Actions(this.driver);
         action.moveToElement(getElement(hoverToElementLocator)).pause(500).click(getElement(clickOnElementLocator)).perform();
     }
 
-    protected void hoverToElementAndClickOn(WebElement hoverToElementLocator, WebElement clickOnElementLocator) {
+    public void hoverToElementAndClickOn(WebElement hoverToElementLocator, WebElement clickOnElementLocator) {
         org.openqa.selenium.interactions.Actions action = new org.openqa.selenium.interactions.Actions(this.driver);
         action.moveToElement(hoverToElementLocator).pause(500).click(clickOnElementLocator).perform();
     }
 
-    protected void enterText(By locator, String text) {
+    public void enterText(By locator, String text) {
         getElement(locator).sendKeys(text);
     }
 
-    protected boolean isTextFieldEmpty(By locator) {
+    public boolean isTextFieldEmpty(By locator) {
         return getElement(locator).getAttribute("value").isEmpty();
     }
 
-    protected void clearTextFieldBeforeEnteringText(By locator, String text) {
+    public void clearTextFieldBeforeEnteringText(By locator, String text) {
         if (!isTextFieldEmpty(locator)) {
             getElement(locator).clear();
         }
         enterText(locator, text);
     }
 
-    protected void selectValueFromDropDownByValue(By selectableDropdownLocator, String value) {
+    public void selectValueFromDropDownByValue(By selectableDropdownLocator, String value) {
         Select select = new Select(getElement(selectableDropdownLocator));
         select.selectByValue(value);
     }
 
-    protected void selectValueFromDropDownByVisibleText(By selectableDropdownLocator, String text) {
+    public void selectValueFromDropDownByVisibleText(By selectableDropdownLocator, String text) {
         Select select = new Select(getElement(selectableDropdownLocator));
         select.selectByVisibleText(text);
     }
 
-    protected boolean isAt(String pageTitle, String specialText, By specialTextLoc, By... locators) {
+    public boolean isAt(String pageTitle, String specialText, By specialTextLoc, By... locators) {
         if (pageTitle != null) {
             if (!driver.getTitle().equalsIgnoreCase(pageTitle)) {
                 return false;
