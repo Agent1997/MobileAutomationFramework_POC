@@ -42,11 +42,12 @@ public class BaseTestImpl {
     //Setting category here to be used by test classes to label tests
     @BeforeClass
     @Parameters({"category","platformName"})
-    public void setupClass(String category,String platformName) {
+    public void setupClass(@Optional String category, @Optional("android") String platformName) {
         server = new AppiumServer(4444);
         server.startServer();
         if(platformName.equalsIgnoreCase("android")){
-            driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps(),server.getServer());
+//            driverManager = new MobileDriverManager(DriverType.ANDROID, MobileCapabilities.getAndroidEmulatorCaps(),server.getServer());
+            driverManager = new MobileDriverManager(DriverType.ANDROID,MobileCapabilities.getAndroidEmulatorCapsForShopee(),server.getServer());
         }
         if(platformName.equalsIgnoreCase("ios")){
             driverManager = new MobileDriverManager(DriverType.IOS, MobileCapabilities.getIOSSimulatorCaps(),server.getServer());

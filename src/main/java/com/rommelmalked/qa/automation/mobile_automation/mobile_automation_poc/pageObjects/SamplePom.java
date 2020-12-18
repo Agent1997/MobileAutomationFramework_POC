@@ -27,6 +27,7 @@ public class SamplePom extends BasePageObject {
         super(driver);
     }
 
+
     public void clickButton() {
         actions.click(sampleBtn);
     }

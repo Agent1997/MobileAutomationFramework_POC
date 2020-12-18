@@ -15,16 +15,29 @@ import java.io.FileOutputStream;
  * <p>
  * Note: If you want to disable logging on console and log to a file instead.
  * Make sure to call redirectLogTo before starting the server.
- *
+ * <p>
  * There just one possible issue but I don't see any negative use case as of now. T
  * Log files will be separate per AppiumServer object.
- *
+ * <p>
  * Appium server will run on local host
- *
+ * <p>
  * NOTE: Seems that there is an issue with AppiumDriverLocalService start and stop methods,
  * but code still works fine (Dec 13, 2020)
  *
  * @author Agent1997
+ */
+
+/*
+TODO Check error encountered here. Following a failed test execution, appium port is not closed.
+ When Before Class failed. It seems that it is causing the issue
+ [Appium] Non-default server args:
+ [Appium]   port: 4444
+ [HTTP] Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+ Fatal Error: listen EADDRINUSE: address already in use 0.0.0.0:4444
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at doListen (net.js:1503:7)
+    at processTicksAndRejections (internal/process/task_queues.js:81:21)
  */
 
 public class AppiumServer {
@@ -72,7 +85,7 @@ public class AppiumServer {
         return this.server;
     }
 
-    public int getPort(){
+    public int getPort() {
         return this.port;
     }
 
