@@ -12,7 +12,7 @@ public class BasePageObject {
 
     public BasePageObject(AppiumDriver<MobileElement> mobileDriver){
         this.mobileDriver = mobileDriver;
-        this.actions = new Actions(mobileDriver);
+        this.actions = new Actions(mobileDriver,10);
         PageFactory.initElements(new AppiumFieldDecorator(mobileDriver),this);
     }
 

@@ -1,5 +1,6 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions;
 
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.helpers.Waits;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
@@ -14,31 +15,32 @@ import java.util.List;
 /**
  *TODO work on handling all commonly used actions
  */
-public class Actions {
+public class Actions extends Gestures {
     private AppiumDriver driver;
+    private final Waits waits;
 
-
-    public Actions(AppiumDriver driver) {
+    public Actions(AppiumDriver driver, int waitDurationInSeconds) {
+        super(driver,waitDurationInSeconds);
         this.driver = driver;
+        waits = new Waits(this.driver,waitDurationInSeconds);
     }
 
-
-    public void click(By locator) {
-
-        try {
-            getElement(locator).click();
-        } catch (NoSuchElementException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void click(WebElement element) {
-        try {
-            element.click();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
+//    public void click(By locator) {
+//
+//        try {
+//            getElement(locator).click();
+//        } catch (NoSuchElementException e) {
+//            e.printStackTrace();
+//        }
+//    }
+//
+//    public void click(WebElement element) {
+//        try {
+//            element.click();
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//    }
 
     public void click(MobileElement element) {
         try {
@@ -140,4 +142,66 @@ public class Actions {
         }
         return true;
     }
+
+
+
+    public void click(By elementByLocator){
+        waits.
+                waitClickability(elementByLocator).
+                click();
+    }
+
+    public void clickWithoutWait(By elementByLocator) throws NoSuchElementException {
+        driver.findElement(elementByLocator).click();
+    }
+
+    public void clickWithoutWait(WebElement element){
+        element.click();
+    }
+
+    public void click(WebElement element){
+        waits.waitClickability(element).click();
+    }
+
+    public boolean checkIfElementIsPresent(By elementByLocator){
+        return waits.
+                waitToBePresent(elementByLocator);
+    }
+
+    public boolean checkIfElementIsPresentWithoutWaiting(By elementByLocator){
+        try{
+            return waits.isElementPresent(elementByLocator);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    public String getElementText(By elementByLocator){
+        if(!waits.waitToBePresent(elementByLocator)){
+            return null;
+        }
+        return driver.
+                findElement(elementByLocator).
+                getAttribute("text");
+    }
+
+    public boolean isEnabled(By elementByLocator){
+        waits.waitToBePresent(elementByLocator);
+        return driver.findElement(elementByLocator).isEnabled();
+    }
+
+    public void writeText(By elementLocation, String text) {
+        waits.waitVisibility(elementLocation).sendKeys(text);
+    }
+
+    public String readText(By elementLocation) {
+        return  waits.waitVisibility(elementLocation).getAttribute("text");
+    }
+
+    public void hideKeypad(){
+        driver.hideKeyboard();
+    }
+
+
 }
