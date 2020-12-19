@@ -1,4 +1,4 @@
-package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.helpers;
+package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.wait;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -100,7 +100,7 @@ public class WaitsStatic {
      * @param waitDurationInSecs
      * @return null if element is not interactable; element(same) if interactable
      */
-    public static MobileElement waitForElementToBeInteractalbe(AppiumDriver appiumDriver, By locator, int waitDurationInSecs){
+    public static MobileElement waitForElementLocatedByToBeInteractalbe(AppiumDriver appiumDriver, By locator, int waitDurationInSecs){
         try{
             return waitForElementLocatedByToBeClickable(appiumDriver,locator,waitDurationInSecs);
         }catch (ElementNotInteractableException e){

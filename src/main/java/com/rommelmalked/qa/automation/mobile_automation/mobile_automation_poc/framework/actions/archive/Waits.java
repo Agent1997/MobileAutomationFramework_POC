@@ -1,4 +1,4 @@
-package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.helpers;
+package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.archive;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -9,9 +9,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
-//Refs: https://www.selenium.dev/documentation/en/webdriver/waits/
-//https://bitbar.com/blog/appium-tip-19-explore-how-to-interact-with-elements/
-//https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html#visibilityOfElementLocated(org.openqa.selenium.By)
+/**
+ * @author rommelmalqued
+ * @apiNote Deprecating this class, use WaitsStatic instead. Keeping this for reference.
+ */
+@Deprecated
 public class Waits {
     private final AppiumDriver<WebElement> mobileDriver;
     private final WebDriverWait wait;

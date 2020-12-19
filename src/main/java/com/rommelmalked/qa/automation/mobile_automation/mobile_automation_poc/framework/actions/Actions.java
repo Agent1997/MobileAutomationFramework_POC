@@ -1,6 +1,6 @@
 package com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions;
 
-import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.helpers.Waits;
+import com.rommelmalked.qa.automation.mobile_automation.mobile_automation_poc.framework.actions.wait.WaitsStatic;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
@@ -17,12 +17,11 @@ import java.util.List;
  */
 public class Actions extends Gestures {
     private AppiumDriver driver;
-    private final Waits waits;
+    private static final int waitDurationInSecs = 10;
 
-    public Actions(AppiumDriver driver, int waitDurationInSeconds) {
-        super(driver,waitDurationInSeconds);
+    public Actions(AppiumDriver driver) {
+        super(driver,waitDurationInSecs);
         this.driver = driver;
-        waits = new Waits(this.driver,waitDurationInSeconds);
     }
 
 //    public void click(By locator) {
@@ -42,13 +41,13 @@ public class Actions extends Gestures {
 //        }
 //    }
 
-    public void click(MobileElement element) {
-        try {
-            element.click();
-        } catch (Exception e) {
-            System.out.println(e);
-        }
-    }
+//    public void click(MobileElement element) {
+//        try {
+//            element.click();
+//        } catch (Exception e) {
+//            System.out.println(e);
+//        }
+//    }
 
 
 
@@ -146,8 +145,8 @@ public class Actions extends Gestures {
 
 
     public void click(By elementByLocator){
-        waits.
-                waitClickability(elementByLocator).
+        WaitsStatic.
+                waitForElementLocatedByToBeClickable(driver,elementByLocator,waitDurationInSecs).
                 click();
     }
 
@@ -159,49 +158,56 @@ public class Actions extends Gestures {
         element.click();
     }
 
-    public void click(WebElement element){
-        waits.waitClickability(element).click();
+    public void click(MobileElement element){
+        WaitsStatic.
+                waitForElementToBeClickable(driver,element,waitDurationInSecs).
+                click();
     }
 
     public boolean checkIfElementIsPresent(By elementByLocator){
-        return waits.
-                waitToBePresent(elementByLocator);
-    }
+        MobileElement element =  WaitsStatic.waitForVisibilityOfElementLocatedBy(driver,elementByLocator,waitDurationInSecs);
 
-    public boolean checkIfElementIsPresentWithoutWaiting(By elementByLocator){
-        try{
-            return waits.isElementPresent(elementByLocator);
-        }catch (Exception e){
-            e.printStackTrace();
+        if(element != null){
+            return true;
         }
+
         return false;
     }
 
-    public String getElementText(By elementByLocator){
-        if(!waits.waitToBePresent(elementByLocator)){
-            return null;
-        }
-        return driver.
-                findElement(elementByLocator).
-                getAttribute("text");
-    }
+//    public boolean checkIfElementIsPresentWithoutWaiting(By elementByLocator){
+//        try{
+//            return waits.isElementPresent(elementByLocator);
+//        }catch (Exception e){
+//            e.printStackTrace();
+//        }
+//        return false;
+//    }
 
-    public boolean isEnabled(By elementByLocator){
-        waits.waitToBePresent(elementByLocator);
-        return driver.findElement(elementByLocator).isEnabled();
-    }
+//    public String getElementText(By elementByLocator){
+//        if(!waits.waitToBePresent(elementByLocator)){
+//            return null;
+//        }
+//        return driver.
+//                findElement(elementByLocator).
+//                getAttribute("text");
+//    }
 
-    public void writeText(By elementLocation, String text) {
-        waits.waitVisibility(elementLocation).sendKeys(text);
-    }
-
-    public String readText(By elementLocation) {
-        return  waits.waitVisibility(elementLocation).getAttribute("text");
-    }
-
-    public void hideKeypad(){
-        driver.hideKeyboard();
-    }
+//    public boolean isEnabled(By elementByLocator){
+//        waits.waitToBePresent(elementByLocator);
+//        return driver.findElement(elementByLocator).isEnabled();
+//    }
+//
+//    public void writeText(By elementLocation, String text) {
+//        waits.waitVisibility(elementLocation).sendKeys(text);
+//    }
+//
+//    public String readText(By elementLocation) {
+//        return  waits.waitVisibility(elementLocation).getAttribute("text");
+//    }
+//
+//    public void hideKeypad(){
+//        driver.hideKeyboard();
+//    }
 
 
 }
