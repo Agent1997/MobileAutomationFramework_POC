@@ -11,13 +11,14 @@ import java.util.List;
 
 //Refs: https://www.selenium.dev/documentation/en/webdriver/waits/
 //https://bitbar.com/blog/appium-tip-19-explore-how-to-interact-with-elements/
+//https://www.selenium.dev/selenium/docs/api/java/org/openqa/selenium/support/ui/ExpectedConditions.html#visibilityOfElementLocated(org.openqa.selenium.By)
 public class Waits {
     private final AppiumDriver<WebElement> mobileDriver;
     private final WebDriverWait wait;
 
     public Waits(AppiumDriver mobileDriver, int waitDurationInSeconds) {
         this.mobileDriver = mobileDriver;
-        this.wait = new WebDriverWait(this.mobileDriver,waitDurationInSeconds);
+        this.wait = new WebDriverWait(this.mobileDriver, waitDurationInSeconds);
     }
 
     public MobileElement waitVisibility(By elementByLocator){
